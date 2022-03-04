@@ -1,4 +1,7 @@
-﻿using CQRS.Web.Models;
+﻿using CQRS.AppCore.Entities.Article;
+using CQRS.Infrastructure.Commands.ArticleCommands;
+using CQRS.Web.Models;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -11,19 +14,16 @@ namespace CQRS.Web.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IMediator _mediator;
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IMediator mediator)
         {
             _logger = logger;
+            _mediator = mediator;
         }
 
         public IActionResult Index()
-        {
-            return View();
-        }
-
-        public IActionResult Privacy()
         {
             return View();
         }

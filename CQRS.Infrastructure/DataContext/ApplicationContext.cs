@@ -1,4 +1,5 @@
-﻿using CQRS.AppCore.Entities.Publication;
+﻿
+using CQRS.AppCore.Entities.Article;
 using CQRS.AppCore.Entities.User;
 using Microsoft.EntityFrameworkCore;
 using System;

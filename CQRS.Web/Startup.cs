@@ -1,3 +1,4 @@
+using CQRS.Infrastructure.Commands.ArticleCommands;
 using CQRS.Infrastructure.DataContext;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
@@ -27,7 +28,8 @@ namespace CQRS.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMediatR(Assembly.GetExecutingAssembly());
+            services.AddMediatR(typeof(CreateArticleCommand).GetTypeInfo().Assembly);
+            //services.AddMediatR(Assembly.GetExecutingAssembly());
 
             services.AddDbContext<ApplicationContext>(options =>
                 options.UseSqlServer(Configuration

@@ -1,4 +1,4 @@
-﻿using CQRS.AppCore.Entities.Publication;
+﻿using CQRS.AppCore.Entities.Article;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,13 +11,13 @@ namespace CQRS.AppCore.Entities.User
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
-        public ICollection<Article> Articles { get; set; }
+        public ICollection<Article.Article> Articles { get; set; }
 
         public ApplicationUser(string name)
         {
             Name = name;
             Id = Guid.NewGuid();
-            Articles = new List<Article>();
+            Articles = new List<Article.Article>();
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CQRS.AppCore.Entities.Publication
+namespace CQRS.AppCore.Entities.Article
 {
     public class Article
     {
