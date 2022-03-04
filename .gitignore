@@ -3,6 +3,13 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+
+/CQRS.Web/bin
+/CQRS.Web/obj
+/CQRS.Web/*.sln
+/CQRS.Web/*.csproj
+/CQRS.Web/wwwroot
+
 # User-specific files
 *.rsuser
 *.suo
