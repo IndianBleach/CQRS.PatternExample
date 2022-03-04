@@ -1,3 +1,4 @@
+using CQRS.Infrastructure.DataContext;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -29,7 +30,7 @@ namespace CQRS.Web
             services.AddMediatR(Assembly.GetExecutingAssembly());
 
             services.AddDbContext<ApplicationContext>(options =>
-                options.UseSqlServer(builder.Configuration
+                options.UseSqlServer(Configuration
                 .GetConnectionString("DatabaseConnectionPath")));
 
             services.AddControllersWithViews();            
